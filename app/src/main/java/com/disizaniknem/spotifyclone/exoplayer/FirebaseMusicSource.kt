@@ -19,7 +19,7 @@ class FirebaseMusicSource @Inject constructor(
     private var musicDatabase: MusicDatabase
 ){
 
-    private var songs = emptyList<MediaMetadataCompat>()
+    var songs = emptyList<MediaMetadataCompat>()
 
     suspend fun fetchMediaDate() = withContext(Dispatchers.IO) {
         state = STATE_INITIALIZING
